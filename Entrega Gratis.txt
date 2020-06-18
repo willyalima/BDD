@@ -1,0 +1,6 @@
+Oferecida para clientes VIP uma vez que eles comprem um certo 
+número de livros
+
+Não é oferecida para clientes comuns e nem para clientes VIPs que comprem qualquer coisa diferente de livros
+
+O número mínimo de livros para a entrega grátis é 5
