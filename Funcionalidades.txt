@@ -1,0 +1,7 @@
+Funcionalidades entrega grátis:
+
+1-Identificação do perfil de cliente
+2-Histórico de compras
+3-Opções de entrega
+4-Aviso de entrega grátis
+5-Contador de livros comprados
