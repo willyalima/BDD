@@ -1,0 +1,22 @@
+  
+Funcionalidade: Entrega Grátis
+
+
+Oferecida para clientes VIP uma vez que eles comprem um certo 
+número de livros
+
+Não é oferecida para clientes comuns e nem para clientes VIPs que comprem qualquer coisa diferente de livros
+
+O número mínimo de livros para a entrega grátis é 5
+
+Exercicio:
+
+- Faça um fork desse projeto
+- Clone o repositorio
+- Crie uma branch com seu nome
+- Criem um arquivo com uma lista de exemplos para a funcionalidade de Entrega Grátis.
+- adicione e Commite o arquivo para a sua branch
+- Abra um PR para o meu repositorio
+
+
+ssh-keygen -t rsa -b 4096 -C "v.alves.luciano@avanade.com
