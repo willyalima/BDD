@@ -1,11 +1,8 @@
-Funcionalidade: Entrega Grátis 
+Lista de Funcionalidades Entrega Grátis: 
 
-Lista de Exemplos da Funcionalidade:
+- Verificação de Perfil do cliente
+- Listar itens comprados
+- Contabilização de itens comprados
+- Verificação de tipo de entrega
 
-Tipo de Cliente - Produto Adquirido  - Quantidade -  Tipo de Entrega
-    VIP         -       livro        -      5x             Grátis
-    VIP         -       livro        -      10x            Grátis
-    VIP         -       livro        -      3x             Padrão 
-    VIP         -       notebook     -      1x             Padrão
-    VIP         -       tablet,livro -     1x,5x           Padrão
-    Comum       -       livro        -      5x             Padrão
+
