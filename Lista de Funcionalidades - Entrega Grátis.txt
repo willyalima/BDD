@@ -1,0 +1,8 @@
+Lista de Funcionalidades Entrega Grátis: 
+
+- Verificação de Perfil do cliente
+- Listar itens comprados
+- Contabilização de itens comprados
+- Verificação de tipo de entrega
+
+
