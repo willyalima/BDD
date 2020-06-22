@@ -1,0 +1,12 @@
+Funcionalidades:
+- Perfil do Cliente
+    ° Comum
+    ° VIP
+- Carrinho específico para entrega grátis
+    º Somente livros
+- Contador mínimo de livros para entrega grátis
+    ° 5
+- Lista de livros para serem visualizados e selecionados para a compra
+
+
+    
