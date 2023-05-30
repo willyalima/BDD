@@ -16,3 +16,35 @@ Exercicio:
 - Criem um arquivo com uma lista de exemplos para a funcionalidade de Entrega Grátis.
 - adicione e Commite o arquivo para a sua branch
 - Abra um PR para o meu repositorio
+
+
+// api.spec.js
+
+describe('Testes da API', () => {
+  it('Deve retornar status code 200, 201 e 400 em diferentes requisições POST', () => {
+    const payload = {
+      nome: 'Exemplo',
+      idade: 30
+    };
+
+    cy.request('POST', 'https://api.exemplo.com/recurso', payload)
+      .then((response) => {
+        expect(response.status).to.eq(200);
+      });
+
+    cy.request('POST', 'https://api.exemplo.com/recurso', payload)
+      .then((response) => {
+        expect(response.status).to.eq(201);
+      });
+
+    payload.nome = ''; // Payload inválido
+    cy.request({
+      method: 'POST',
+      url: 'https://api.exemplo.com/recurso',
+      body: payload,
+      failOnStatusCode: false
+    }).then((response) => {
+      expect(response.status).to.eq(400);
+    });
+  });
+});
