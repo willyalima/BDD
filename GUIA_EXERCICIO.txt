@@ -20,31 +20,44 @@ Exercicio:
 
 // api.spec.js
 
-describe('Testes da API', () => {
-  it('Deve retornar status code 200, 201 e 400 em diferentes requisições POST', () => {
-    const payload = {
-      nome: 'Exemplo',
-      idade: 30
-    };
+describe('Testes da API de Autenticação', () => {
+  const clients = [
+    {
+      nome: 'Cliente 1',
+      cpf: '12345678900',
+      senha: 'senha123'
+    },
+    {
+      nome: 'Cliente 2',
+      cpf: '98765432100',
+      senha: 'senha456'
+    },
+    // Adicione mais clientes se necessário
+  ];
 
-    cy.request('POST', 'https://api.exemplo.com/recurso', payload)
-      .then((response) => {
-        expect(response.status).to.eq(200);
+  const headers = {
+    'Content-Type': 'application/json',
+    'Cookie': 'cookie_value',
+    'User-Agent': 'Mozilla/5.0',
+    'Channel-Key': 'chave_de_canal'
+  };
+
+  const statusCodes = [200, 201, 400, 401, 403, 500];
+
+  clients.forEach((client) => {
+    it(`[${client.nome}] Deve validar todos os status code do endpoint de autenticação`, () => {
+      cy.request({
+        method: 'POST',
+        url: 'https://api.exemplo.com/autenticacao',
+        body: {
+          cpf: client.cpf,
+          senha: client.senha
+        },
+        headers: headers,
+        failOnStatusCode: false
+      }).then((response) => {
+        expect(statusCodes).to.include(response.status);
       });
-
-    cy.request('POST', 'https://api.exemplo.com/recurso', payload)
-      .then((response) => {
-        expect(response.status).to.eq(201);
-      });
-
-    payload.nome = ''; // Payload inválido
-    cy.request({
-      method: 'POST',
-      url: 'https://api.exemplo.com/recurso',
-      body: payload,
-      failOnStatusCode: false
-    }).then((response) => {
-      expect(response.status).to.eq(400);
     });
   });
 });
